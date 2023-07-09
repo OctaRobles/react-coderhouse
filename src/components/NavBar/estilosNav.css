@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-image: linear-gradient(to right top, #fb6c00, #ef8b00, #e1a60e, #d4bc33, #c7d056, #bfda61, #b5e36d, #abec7b, #9ef074, #8df36e, #79f769, #5ffb65);
+    background-position: center;
+    background-size: cover;
+}
+
+.logo-container {
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+.nav-container {
+    display: flex;
+}
+
+.nav-container li {
+    margin: 0 10px;
+    list-style: none;
+}
+
+.nav-container li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.select-language {
+    appearance: none;
+    background: transparent;
+    border-style: none;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+}
+
+.select-language option {
+    background: black;
+}
+
+.shopcon {
+    color: #000000;
+    font-size: 60px;
+    padding: 30px;
+
+}
