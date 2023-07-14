@@ -7,7 +7,7 @@ import Comprs from './components/ComprsUno/ComprsUno';
 function App() {
   return (
     <div className="App">
-      <header className="">
+      <header className="conth">
         <div>
           <NavBar/>
         </div>

@@ -21,13 +21,16 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.conth{
+  background-image: linear-gradient(to right top, #74d16b, #6cd766, #62dc62, #57e25d, #48e758, #0ce27f, #00dc9d, #00d4b2, #00bcd9, #009dff, #0074ff, #0001ff);
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
