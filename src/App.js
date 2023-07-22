@@ -1,9 +1,9 @@
 
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/NavBar/ItemListContainer/ItemListContainer';
 import Comprs from './components/ComprsUno/ComprsUno';
-
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 function App() {
   return (
     <div className="App">
@@ -12,7 +12,8 @@ function App() {
           <NavBar/>
         </div>
         <div>
-        <Comprs prop_greeting={"Bienvenida a toda persona!!"}/>
+        <ItemListContainer greeting="Bienvenida a toda persona!!"/>
+        <ItemDetailContainer />
         </div>
       </header>
     </div>
