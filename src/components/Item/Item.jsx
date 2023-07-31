@@ -1,24 +1,25 @@
 
 import './estilosItem.css'
 
-function Item(props) {
-    const{ titulo ,precio, descripcion, img} = props;
+const Item = ({id, name, img, price }) => {
+    return(
+        <article>
+            <header>
+                <h2>{name}</h2>
+            </header>
 
-    return (
-        <div className="ti">
-            <div>
-                <h1 >{titulo}</h1>
-            </div>
-            <div>
-                <img width="100" src={img} />
-            </div>
-            <div>
-                <h2>{descripcion}</h2>
-            </div>
-            <div>
-                <p className='pi'>$ {precio}</p>
-            </div>    
-        </div>
+            <picture>
+                <img src={img} alt={name} />
+            </picture>
+            
+            <section>
+                <p>Precio: ${price}</p>
+            </section>
+
+            <footer>
+                <link to={'/item/${id}'}>Ver Producto</link>
+            </footer>
+        </article>
     )
 }
 

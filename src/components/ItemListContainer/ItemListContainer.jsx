@@ -1,9 +1,39 @@
 import { useState, useEffect} from "react";
-import getData from "../services/asyncMock";
+import getData, { getProductById, getProducts, getProductsByCategory } from "../services/asyncMock";
 import Item from "../Item/Item"
 import './estilosItemListContainer.css'
 
-function ItemListContainer () {
+const  ItemListContainer = ({greeting}) => {
+    const [products, setProducts] = useState([false])
+    const { categoyId } = useParams()
+
+    useEffect(() => {
+        const asyncFunc = categoyId ? getProductsByCategory : getProducts
+        
+        asyncFunc(categoyId)
+        .then(response => {
+        })
+
+        .catch(error => {
+            console.error(error)
+        })
+    },[categoryId])
+
+    return(
+        <div>
+            <h1>{greeting}</h1>
+
+            <div>
+                <ItemList products = {products} />
+            </div>
+        </div>    
+    )
+}
+
+export default ItemListContainer;S
+
+
+/*function ItemListContainer () {
     console.log("renderizado item list container")
     const [products, setProducts] = useState ([]);
 
@@ -27,6 +57,5 @@ function ItemListContainer () {
             ))}
         </div>
     );
-}
+}*/
 
-export default ItemListContainer;

@@ -1,53 +1,89 @@
-const productos = [
+const products = [
     {
-        "titulo": "Dragon Blanco de Ojos Azules",
-        "id": "LOB-001",
-        "precio": "200",
-        "stock": 3,
-        "descripcion": "Un poderoso dragón con ojos azules que puede destruir a cualquier enemigo.",
-        "imagen": "/assets/dragonblanco.bmp"
+        titulo: "Dragon Blanco de Ojos Azules",
+        id: "LOB-001",
+        precio: "200",
+        category:"comunes",
+        stock: 3,
+        imagen: "/assets/dragonblanco.bmp"
     },
     {
-        "titulo": "Mago Oscuro",
-        "id": "SDY-006",
-        "precio": "250",
-        "stock": 5,
-        "descripcion": "El poderoso mago de Yugi con una gran sabiduría y habilidades mágicas.",
-        "imagen": "https://ejemplo.com/mago_oscuro.jpg"
+        titulo: "Mago Oscuro",
+        id: "SDY-006",
+        precio: "250",
+        category:"comunes",
+        stock: 5,
+        imagen: "https://ejemplo.com/mago_oscuro.jpg"
     },
     {
-        "titulo": "Exodia, el Prohibido",
-        "id": "LOB-E101",
-        "precio": "150",
-        "stock": 1,
-        "descripcion": "La combinación de cinco poderosas cartas que garantiza la victoria instantánea.",
-        "imagen": "https://ejemplo.com/exodia_el_prohibido.jpg"
+        titulo: "Exodia, el Prohibido",
+        id: "LOB-E101",
+        precio: "150",
+        category:"raras",
+        stock: 1,
+        imagen: "https://ejemplo.com/exodia_el_prohibido.jpg"
     },
     {
-        "titulo": "Dragón Metálico de Oscuridad",
-        "id": "SDK-001",
-        "precio": "90",
-        "stock": 2,
-        "descripcion": "Un dragón metálico imbuido con poder oscuro y destructivo.",
-        "imagen": "https://ejemplo.com/dragon_metalico_oscuridad.jpg"
+        titulo: "Dragón Metálico de Oscuridad",
+        id: "SDK-001",
+        precio: "90",
+        category:"raras",
+        stock: 2,
+        imagen: "https://ejemplo.com/dragon_metalico_oscuridad.jpg"
     },
     {
-        "titulo": "Hada Arcoíris",
-        "id": "MRL-099",
-        "precio": "280",
-        "stock": 10,
-        "descripcion": "Un hermoso hada que protege a los aliados con su mágico escudo arcoíris.",
-        "imagen": "https://ejemplo.com/hada_arcoiris.jpg"
+        titulo: "Hada Arcoíris",
+        id: "MRL-099",
+        precio: "280",
+        category:"muy-raras",
+        stock: 10,
+        imagen: "https://ejemplo.com/hada_arcoiris.jpg"
     },
     {
-        "titulo": "Cabeza Exodia",
-        "id": "LOB-E102",
-        "precio": "300",
-        "stock": 0,
-        "descripcion": "Una de las partes de Exodia, el monstruo definitivo.",
-        "imagen": "https://ejemplo.com/cabeza_exodia.jpg"
+        titulo: "Cabeza Exodia",
+        id: "LOB-E102",
+        precio: "300",
+        category:"muy-raras",
+        stock: 0,
+        imagen: "https://ejemplo.com/cabeza_exodia.jpg"
     },
 ]
+
+export const getProducts = () => {
+    return new Promise ((resolve) => {
+        setTimeout(() => {
+            resolve(products)
+
+        }, 1000)
+    })
+}
+
+export const getProductById = (productId) => {
+    return new Promise ((resolve) =>{
+        setTimeout(() =>{
+            resolve(products.find(product => product.id  === productId))
+        }, 1000)
+    })
+}
+
+export const getProductsByCategory = (productCategory) => {
+    return new Promise ((resolve) => {
+        setTimeout(() =>{
+            resolve(products.filter(product => product.category === productCategory))
+        }, 1000)
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
 
 function getData() {
     return new Promise ( (resolve,reject)  =>{
